@@ -43,7 +43,7 @@ ADD php.ini /etc/php7/cli/conf.d/
 ADD php-fpm.conf /etc/php7/php-fpm.d/
 #ADD xdebug.ini  /etc/php7/conf.d/
 
-WORKDIR /var/www/symfony
+WORKDIR /var/www
 
 RUN adduser -D -g 'www' www \
     && chown -R www:www /var/www
