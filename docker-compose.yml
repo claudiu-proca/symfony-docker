@@ -14,10 +14,7 @@ services:
     links:
       - mysql
     volumes:
-      - ./symfony/:/var/www/symfony:cached
-      - ./course-api-platform-01/:/var/www/course-api-platform-01:cached
-      - ./course-web-app-01/:/var/www/course-web-app-01:cached
-      - ./issue/:/var/www/issue:cached
+      - ./projects/project/:/var/www/project:cached
   nginx:
     build: ./docker/nginx
     ports: ['80:80']
@@ -25,7 +22,4 @@ services:
       - php
     volumes:
       - ./logs/nginx:/var/log/nginx:cached
-      - ./symfony/:/var/www/symfony:cached
-      - ./course-api-platform-01/:/var/www/course-api-platform-01:cached
-      - ./course-web-app-01/:/var/www/course-web-app-01:cached
-      - ./issue/:/var/www/issue:cached
+      - ./projects/project/:/var/www/project:cached

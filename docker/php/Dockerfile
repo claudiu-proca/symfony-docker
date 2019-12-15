@@ -1,6 +1,6 @@
 FROM alpine:3.9
 
-LABEL maintainer="Janosch Kocsis <jk@coloso.de>"
+LABEL maintainer = "Claudiu Proca <claudiu.proca@gmail.com>"
 
 RUN apk add --update \
     php7-fpm \
